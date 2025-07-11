@@ -1,0 +1,126 @@
+{
+    "test_results": [
+        {
+            "query": "I\u2019m sweating, shaky, and my glucometer reads 55 mg/dL\u2014what should I do right now?",
+            "expected_condition": "Diabetes - Hypoglycaemia",
+            "predicted_condition": "Diabetes - Hypoglycaemia",
+            "word_count": 130,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 12.705362558364868,
+            "token_usage": 164,
+            "status": "PASS"
+        },
+        {
+            "query": "My diabetic father just became unconscious; we think his sugar crashed. What immediate first-aid should we give?",
+            "expected_condition": "Diabetes - Hypoglycaemia",
+            "predicted_condition": "Diabetes - Hypoglycaemia\n",
+            "word_count": 71,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 15.32355785369873,
+            "token_usage": 108,
+            "status": "PASS"
+        },
+        {
+            "query": "A pregnant woman with gestational diabetes keeps getting fasting readings around 130 mg/dL. What does this mean and how should we manage it?",
+            "expected_condition": "Diabetes - Gestational",
+            "predicted_condition": "Diabetes - Gestational",
+            "word_count": 153,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 11.7952401638031,
+            "token_usage": 196,
+            "status": "PASS"
+        },
+        {
+            "query": "Crushing chest pain shooting down my left arm\u2014do I chew aspirin first or call an ambulance?",
+            "expected_condition": "Cardiac - Myocardial infarction",
+            "predicted_condition": "Cardiac - Myocardial infarction",
+            "word_count": 166,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 21.500909566879272,
+            "token_usage": 202,
+            "status": "PASS"
+        },
+        {
+            "query": "I\u2019m having angina; how many nitroglycerin tablets can I safely take and when must I stop?",
+            "expected_condition": "Cardiac - Angina",
+            "predicted_condition": "Cardiac - Angina\n",
+            "word_count": 171,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 9.692285060882568,
+            "token_usage": 207,
+            "status": "PASS"
+        },
+        {
+            "query": "Grandma has chronic heart failure, is suddenly short of breath, and her ankles are swelling. Any first-aid steps before we reach the ER?",
+            "expected_condition": "Cardiac - Heart failure",
+            "predicted_condition": "Cardiac - Heart failure",
+            "word_count": 135,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 15.633261680603027,
+            "token_usage": 178,
+            "status": "PASS"
+        },
+        {
+            "query": "After working in the sun all day I\u2019ve barely urinated and my creatinine just rose 0.4 mg/dL\u2014could this be acute kidney injury and what should I do?",
+            "expected_condition": "Renal - AKI",
+            "predicted_condition": "Renal - AKI",
+            "word_count": 152,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 17.082461833953857,
+            "token_usage": 199,
+            "status": "PASS"
+        },
+        {
+            "query": "CKD patient with a potassium level of 6.1 mmol/L\u2014what emergency measures can we start right away?",
+            "expected_condition": "Renal - Hyperkalaemia",
+            "predicted_condition": "Renal - Hyperkalaemia",
+            "word_count": 125,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 16.192723274230957,
+            "token_usage": 161,
+            "status": "PASS"
+        },
+        {
+            "query": "I took ibuprofen for back pain; now my flanks hurt and I\u2019m worried about kidney damage\u2014any immediate precautions?",
+            "expected_condition": "Renal - AKI",
+            "predicted_condition": "Renal - AKI\n",
+            "word_count": 173,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 14.221035480499268,
+            "token_usage": 211,
+            "status": "PASS"
+        },
+        {
+            "query": "Type 2 diabetic, extremely thirsty, glucose meter says \u2018HI\u2019 but urine ketone strip is negative\u2014what\u2019s happening and what\u2019s the first-aid?",
+            "expected_condition": "Diabetes - Type 2",
+            "predicted_condition": "Diabetes - Ketoacidosis",
+            "word_count": 157,
+            "disclaimer_present": true,
+            "citation_found": true,
+            "latency_seconds": 23.558813333511353,
+            "token_usage": 197,
+            "status": "ERROR",
+            "error": "Triage mismatch\nassert False"
+        }
+    ],
+    "summary": {
+        "total_passed": 9,
+        "total_tests": 10,
+        "accuracy_percent": 90.0,
+        "average_latency_seconds": 15.77,
+        "average_token_usage": 182.3,
+        "known_limitations": [
+            "Fallback rule-based method limited by fixed keyword set.",
+            "Citations must be manually validated for relevance."
+        ]
+    }
+}

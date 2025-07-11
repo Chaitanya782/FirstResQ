@@ -1,0 +1,21 @@
+{
+  "Diabetes": [
+    "Type 1",
+    "Type 2",
+    "Gestational",
+    "Ketoacidosis",
+    "Hypoglycaemia"
+  ],
+  "Cardiac": [
+    "Myocardial infarction",
+    "Angina",
+    "Arrhythmia",
+    "Heart failure"
+  ],
+  "Renal": [
+    "AKI",
+    "CKD",
+    "Hyperkalaemia",
+    "Dialysis crises"
+  ]
+}

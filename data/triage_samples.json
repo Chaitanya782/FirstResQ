@@ -1,0 +1,62 @@
+[
+  {
+    "input": "I'm sweating, shaky, and my glucometer reads 55 mg/dL.",
+    "expected_condition": "Hypoglycaemia"
+  },
+  {
+    "input": "A pregnant woman with gestational diabetes keeps getting fasting readings around 130 mg/dL.",
+    "expected_condition": "Gestational"
+  },
+  {
+    "input": "Crushing chest pain shooting down my left arm—do I chew aspirin first or call an ambulance?",
+    "expected_condition": "Myocardial infarction"
+  },
+  {
+    "input": "My father has Type 1 diabetes and just injected insulin but didn't eat anything—now he's confused and dizzy.",
+    "expected_condition": "Hypoglycaemia"
+  },
+  {
+    "input": "I’ve had Type 2 diabetes for years, but today I’m vomiting, breathing fast, and my breath smells fruity.",
+    "expected_condition": "Ketoacidosis"
+  },
+  {
+    "input": "I get chest pain every time I climb stairs, but it goes away when I rest.",
+    "expected_condition": "Angina"
+  },
+  {
+    "input": "My heart feels like it’s skipping beats and sometimes racing for no reason.",
+    "expected_condition": "Arrhythmia"
+  },
+  {
+    "input": "My grandma's legs are swollen, she's short of breath lying down, and needs 2 pillows to sleep.",
+    "expected_condition": "Heart failure"
+  },
+  {
+    "input": "My blood sugar levels are always high even with medication, and I'm not pregnant.",
+    "expected_condition": "Type 2"
+  },
+  {
+    "input": "My kidneys failed suddenly after severe dehydration from diarrhea.",
+    "expected_condition": "AKI"
+  },
+  {
+    "input": "I’ve had diabetes for years and now my doctor says my kidney function is below 30%.",
+    "expected_condition": "CKD"
+  },
+  {
+    "input": "My lab report shows potassium is 6.8 mmol/L and I’m feeling weak and nauseous.",
+    "expected_condition": "Hyperkalaemia"
+  },
+  {
+    "input": "I missed dialysis this week and now I have a headache, vomiting, and feel very weak.",
+    "expected_condition": "Dialysis crises"
+  },
+  {
+    "input": "I was diagnosed with Type 1 diabetes at 12 and now I inject insulin every day.",
+    "expected_condition": "Type 1"
+  },
+  {
+    "input": "I’ve been dizzy, have chest discomfort, and feel like I’m about to faint.",
+    "expected_condition": "Arrhythmia"
+  }
+]
