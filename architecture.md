@@ -73,7 +73,7 @@ Local FAISS Search     Web Search (Serper.dev)
 
 * Add real-time alert system for red-flag cases
 * Train local mini-RAG model for offline fallback
-* Add PDF/Email export of answers
+
 
 ---
 
