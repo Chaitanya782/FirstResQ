@@ -47,13 +47,13 @@ class traiger():
                     scores[condition] += 1
 
         max_score = max(scores.values())
-        if max_score == 0:
+        if max_score == 0 :
             return "Unknown", scores
 
         top_conditions = [cond for cond, score in scores.items() if score == max_score]
 
         # If multiple conditions have the same score, let Gemini decide
-        if len(top_conditions) > 1:
+        if len(top_conditions) > 1 or max_score < 2:
             return "Ambiguous", scores
         return top_conditions[0], scores
 
