@@ -39,13 +39,14 @@ class web_player():
         return f"first aid for {query} {condition}".strip()
 
     def _get_query(self, query, condition):
-        try:
-            # print("*")
-            search_query=self.gemini_querifier(query)
-            # print("**")
-        except Exception as e:
-            print("Gemini error : ",e)
-            search_query=self.gemini_fallback(query, condition)
+        # try:
+        #     # print("*")
+        #     search_query=self.gemini_querifier(query)
+        #     # print("**")
+        # except Exception as e:
+        #     print("Gemini error : ",e)
+        #     search_query=self.gemini_fallback(query, condition)
+        search_query = self.gemini_fallback(query, condition)
         return search_query
 
     def web_crawler(self, query, condition):
@@ -54,7 +55,8 @@ class web_player():
         url = "https://google.serper.dev/search"
 
         payload = json.dumps({
-            "q": search_query
+            "q": search_query,
+            "num": 4
         })
         headers = {
             'X-API-KEY': self.serper_key,
@@ -63,15 +65,7 @@ class web_player():
 
         response = requests.request("POST", url, headers=headers, data=payload)
         data = response.json()
-        # if "organic" in data:
-        #     for result in data["organic"][:3]:
-        #         print("🔹 Title:", result["title"])
-        #         print("📄 Snippet:", result["snippet"])
-        #         print("🔗 URL:", result["link"])
-        #         print("-----")
-        # else:
-        #     print("⚠️ No search results found.")
-        # print(data["organic"])
+
 
         results = [
             {

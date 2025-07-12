@@ -26,7 +26,7 @@ vector_store = FAISS.load_local(
 )
 
 
-def retrieve_local_relevant_sentences(query: str, k: int = 5):
+def retrieve_local_relevant_sentences(query: str, k: int = 4):
     """Retrieve top-k relevant sentences from local FAISS index."""
     results = vector_store.similarity_search(query, k=k)
 
