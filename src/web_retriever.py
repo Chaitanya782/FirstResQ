@@ -17,11 +17,18 @@ class web_player():
         self.traig=traiger()
 
     def gemini_querifier(self, query):
-        prompt=f"""
-        Given the following patient query:
-         {query}
-        create a single concise, search-optimized query to find relevant first aid advice.
-        Just give the seach query, nothing else.
+        prompt = f"""
+        You are an AI assistant helping retrieve first-aid information.
+
+        Given the patient query below:
+
+        \"\"\"{query}\"\"\"
+
+        Rewrite it as a single, concise, search-optimized query for web to retrieve the most relevant first-aid advice from medical sources.
+
+        ✅ Focus on the key symptoms or condition.
+        ✅ MAke sentence in a way to get the bets results.
+        ✅ Do NOT include explanations—return only the optimized search query.
         """
         query = self.model.generate_content(prompt)
         # print(query.text.strip())
@@ -64,6 +71,7 @@ class web_player():
         #         print("-----")
         # else:
         #     print("⚠️ No search results found.")
+        # print(data["organic"])
 
         results = [
             {
@@ -78,4 +86,4 @@ class web_player():
 
 if __name__ == "__main__":
     web = web_player()
-    web.web_crawler("I'm sweating, glucose 55, feel dizzy")
+    web.web_crawler("I'm sweating, glucose 55, feel dizzy", "hypoglycemia")

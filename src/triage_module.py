@@ -12,7 +12,7 @@ class traiger():
             raise ValueError("GOOGLE_API_KEY not found in environment variables")
 
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
     def _condition_json_to_list(self):
 
         file_path = 'E:\ResQ\FirstResQ\data\conditions.json'
@@ -55,13 +55,14 @@ class traiger():
         return top_condition
 
     def gemini_fallback(self, symptom_text:str) -> str:
+        # print("Runing")
         conditions=self._condition_json_to_list()
 
         prompt=f""""
         You are a medical triage assistant.
         Based on the patient's symptom description, infer the most likely medical emergency condition.
         Choose the best match only from the list below. If multiple could match, return the most urgent one.
-        Do not explain. Respond only with the condition name.
+        Do not explain. Respond only with the condition name exactly as mentioned in condition list.
         
         Symptom:
         {symptom_text}
@@ -72,6 +73,7 @@ class traiger():
         """
 
         response = self.model.generate_content(prompt)
+        # print("gg",response.text)
 
         return response.text
 
